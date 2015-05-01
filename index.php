@@ -50,12 +50,15 @@ define('DB',0);
 app::route('\/upload\/?',function(){
 	S('class/UpImages')->uploadHandler();
 });
+
+
+S('class/UpImages',true);
+
 app::route('.*',function(){
 	echo "imgbox";
 });
 
 
-S('class/UpImages',true);
 
 //配置完,可以启动啦
 app::start();
